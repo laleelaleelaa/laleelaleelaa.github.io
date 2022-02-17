@@ -1,0 +1,224 @@
+<html>
+<head>
+    
+  <title>chenlina</title>
+
+
+<script type="text/javascript" src="codings/fade-in-page.js"></script>
+
+<link rel="stylesheet" href="CSS1/navigation-left.css">
+<link rel="stylesheet" href="CSS1/cornertag.css">
+<link rel="stylesheet" href="codings/fade-in-page.css">
+
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicon/favicon-64x64.ico">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Six+Caps&family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+
+  
+  <style type="text/css">
+  
+body {
+  
+  background: #fff;
+  font-family: "Quicksand", arial;
+  font-size: 12px;
+  color: #ccc;
+  padding: 0;
+  margin: 0;
+  }
+ 
+#background {
+  background-color: #131717;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  opacity: 1;
+  }
+
+#wrap1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  }  
+  
+#content {
+  width: calc(60% - 380px);
+  background-color: rgba(255,0,0,0);
+  padding: 310px 300px 200px 80px;
+  margin: 0px 0px 0px 40%;
+}
+  
+#content h1{
+  width: 300px;
+  padding: 0px 0px 5px 30px;
+  margin: 0px 0px 70px 0px;
+  font-family: "Cormorant Infant";
+  font-size: 30px;
+  font-style: italic;
+  letter-spacing: 0px;
+  color: rgba(255,255,255,1);
+  text-transform: uppercase;
+  border-bottom: 0px solid #fff;
+  }
+  
+#content p {
+  font-family:  helvetica, serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 22px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.8);
+  }
+
+.button2 {
+  display:inline-block;
+  font-family: "Helvetica", serif;
+  font-size: 12px;
+  margin: 10px;
+  background-color: rgba(255,255,255,0.3);
+  color: #fff;
+  font-weight:bold;
+  width: 100px;
+  padding: 10px;
+  font-style:normal;
+  text-transform:uppercase;
+  border: 1px solid rgba(255,255,255,0.7);
+  text-align: center;
+  }
+  
+.button2:hover {
+  background-color:#fff;
+  color:#000;
+  border: 0.5px solid ffff;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.bigger-text {
+  font-family:  helvetica, serif;
+  font-size: 22px;
+  letter-spacing: 0px;
+  line-height: 27px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.5);
+  margin: 0px 0px 30px 0px; 
+  }
+
+</style>
+
+  
+
+</head>
+
+<body>
+  <svg id="fader"></svg>
+  <script>
+            fadeInPage();
+  </script>
+
+
+  <div id="background">
+  </div>
+
+  <div id="wrap1">
+  
+  
+    <div id="bar">
+      
+      <div id="nav-wrap">
+        <div id="logo"></div>
+        <div id="right">
+        	
+        	<div class="sidenav">
+        
+        		<a href="bio.html">bio</a>
+
+        		<button class="dropdown-btn">work</button>
+        			<div class="dropdown-container">
+        				<a href="work/ongoing.html">ongoing &#10095;</a>
+        				<a href="work/small-crafts.html">small crafts &#10095;</a>
+        				<a href="work/academic.html">academic &#10095;</a>
+        			</div>
+        
+        
+        		<button class="dropdown-btn">archive</button>
+        			<div class="dropdown-container">
+        				<a href="archive/download.html">download &#10095;</a>
+        				<a href="archive/exhibitions.html">exhibitions &#10095;</a>
+        			</div>
+        
+        		<a href="contact.html">contact</a>
+        	</div>
+        
+
+              <script>
+              
+              var dropdown = document.getElementsByClassName("dropdown-btn");
+              var i;
+              
+              for (i = 0; i < dropdown.length; i++) {
+                dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+                } else {
+                dropdownContent.style.display = "block";
+                }
+                });
+              }
+              </script>
+
+        </div>
+
+      </div>
+    </div>
+    
+    
+    <div id="content">
+    
+    
+      <h1>ARCHIVE</h1>
+      
+      <div class="bigger-text">
+          UNDER CONSTRUCTION
+      </div>
+    
+
+    
+
+    
+    
+    </div>
+    
+  </div>
+
+
+<div id="tagwrap">
+  <a href="index.html">
+    <div id="tag_1">
+     CL
+    </div>
+  </a>
+
+  <div id="tag_2">
+        chenlina &#169; 2021<br>website hosted on neocities.org
+  </div>
+</div>
+
+
+
+
+</body>
+</html>
