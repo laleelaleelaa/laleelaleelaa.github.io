@@ -7,39 +7,55 @@
   position: fixed;
   margin: 50px 0px;
   left: 0;
-  border-right: 10px solid rgba(255,255,255,0.1);
+  border-right: 10px solid rgba(255,255,255,0);
   
   } 
 
 #nav-wrap {
   float: right;
   width: 300px;
-  height: 500px;
+  height: 100%;
   margin: 150px 0px 0px 0px;
   background-color: none;
   
   }
 
 #logo {
-  background-color:none;
+  background-color: none;
   background-image: url("https://chenlina.be/img/clwhite-square.png");
   background-size: contain;
-  width: 50px;
-  height: 50px;
-  margin: 0px 40px 100px 0px;
+  width: 70px;
+  height: 70px;
+  margin: 50px 40px 100px 0px;
   padding: 0px;
   opacity: 1;
   right: 0;
+  top: 0;
   position: absolute;
   display: block;
 }
+
+#name {
+	float: right;
+	right: 0;
+	position: absolute;
+	font-family: helvetica;
+	text-transform: uppercase;
+	font-size: 13px;
+	letter-spacing: 1px;
+	color: #fff;
+	font-weight: 500;
+	margin: 0px 40px 0px 0px;
+} 
 
 #right {
   display: block;
   background-color: rgba(255,255,255,0);
   width: 300px;
-  margin: 100px auto 0px auto;
+  height: 300px;
+  margin: 100px auto 50px auto;
   position: absolute;
+  bottom:0;
 
     }
 
@@ -47,7 +63,8 @@
 	z-index:10;
 	background-color:none;
 	padding: 0;
-
+	bottom: 0;
+	position: absolute;
 }
 
 .sidenav a, .dropdown-btn {
@@ -56,7 +73,7 @@
 	display: block;
 	font-family: helvetica;
 	font-weight: 500;
-	font-size: 18px;
+	font-size: 30px;
 	text-decoration: none;
 	color: rgba(255,255,255,0.4);
 	text-align: right;
