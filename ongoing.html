@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="CSS1/cornertag.css">
 <link rel="stylesheet" href="CSS1/content-font.css">
 <link rel="stylesheet" href="codings/fade-in-page.css">
+<link rel="stylesheet" href="CSS1/pjt-dropdown.css">
 
 
 <link rel="shortcut icon" type="image/x-icon" href="favicon/favicon-64x64.ico">
@@ -60,14 +61,10 @@
 }
 
 .bigger-text {
-  font-family:  helvetica, serif;
-  font-size: 22px;
-  letter-spacing: 0px;
-  line-height: 27px;
-  font-weight: 300;
-  color: rgba(255,255,255,0.5);
   margin: 0px 0px 30px 0px; 
   }
+
+  
 
 </style>
 
@@ -146,7 +143,64 @@
       <h1>ONGOING</h1>
       
       <div class="bigger-text">
-          UNDER CONSTRUCTION
+
+
+        <button class="dropdown-pjt"><div class="pjtdropdown">001 Pang_KALLO<div class="pjt-year">2022</div></div></button>
+        <div class="dropdown-pjt-container">
+          <br>
+            
+          <div class="pjt-info">
+            
+            Extension of a private house<br>
+            Location: Kallo, Belgium<br>
+            Start: 2022<br>
+          </div>
+          <div class="pjt-des">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+        <script>
+
+          var dropdown = document.getElementsByClassName("dropdown-pjt");
+          var i;
+          
+          for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+            } else {
+            dropdownContent.style.display = "block";
+            }
+            });
+          }
+          </script>
+
       </div>
     
 
