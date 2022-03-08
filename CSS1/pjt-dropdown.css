@@ -54,6 +54,17 @@
   margin: 20px 20px 40px 0px;
 }
 
+.pjt-info a:link, .pjt-info a:visited, .pjt-info a:active {
+	color: rgba(255,255,255,0.4);
+	text-decoration: underline;
+	font-weight:500;
+	text-transform: lowercase;
+  }
+  
+.pjt-info a:hover {
+	color: rgba(255,255,255,1);
+  }
+
 .pjt-des {
 	font-family:  helvetica, serif;
   font-size: 12px;
