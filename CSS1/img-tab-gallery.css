@@ -1,0 +1,46 @@
+
+.column {
+  float: left;
+  width: 10%;
+  padding: 10px 10px 30px 10px;
+  z-index: 10;
+}
+.column img {
+  cursor: pointer;
+  filter: grayscale(100%);
+}
+
+.column img:hover {
+  filter: grayscale(0%);
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  position: relative;
+  display: none;
+  z-index: 10;
+}
+
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 10px;
+  font-family: Helvetica;
+}
+
+.closebtn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+

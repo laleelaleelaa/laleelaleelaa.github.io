@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="CSS1/content-font.css">
 <link rel="stylesheet" href="codings/fade-in-page.css">
 <link rel="stylesheet" href="CSS1/pjt-dropdown.css">
+<link rel="stylesheet" href="CSS1/img-tab-gallery.css">
 
 <link rel="shortcut icon" type="image/x-icon" href="favicon/favicon-64x64.ico">
 <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -68,8 +69,6 @@
   color: rgba(255,255,255,0.5);
   margin: 0px 0px 30px 0px; 
   }
-
-
 
 </style>
 
@@ -347,9 +346,29 @@
           <div class="pjt-info">
             studio: non-context bachelor thesis project<br>
             supervisors: Hugo Vanneste, David Claus & Tom Broekaert<br>
+            <br>
+            KU Leuven, faculty of architecture - campus Sint-Lucas Gent<br>
           </div>
             <div class="pjt-des">
-              /
+
+                        <div class="row">
+                          <div class="column">
+                            <img src="img/ratios-spaces/CW1.jpg" alt="" style="width:100%" onclick="myFunction(this);">
+                          </div>
+                          <div class="column">
+                            <img src="img/ratios-spaces/CW2.jpg" alt="" style="width:100%" onclick="myFunction(this);">
+                          </div>
+                          <div class="column">
+                            <img src="img/ratios-spaces/CW3.jpg" alt="" style="width:100%" onclick="myFunction(this);">
+                          </div>
+                        </div>
+                        
+                        <div class="container">
+                          <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                          <img id="expandedImg" style="width:100%">
+                          <div id="imgtext"></div>
+                        </div>
+
             </div>
         </div>
 
@@ -359,9 +378,15 @@
           <div class="pjt-info">
             studio: BA45 structuur<br>
             supervisors: Hugo Vanneste & Tom Broekaert<br>
+            <br>
+            KU Leuven, faculty of architecture - campus Sint-Lucas Gent<br>
+            <br>
+            <img src="img/viadukaduk/viadukaduk.jpg">
           </div>
             <div class="pjt-des">
-              /
+              
+              
+
             </div>
         </div>
 
@@ -382,6 +407,15 @@
             });
           }
           </script>
+          <script>
+            function myFunction(imgs) {
+              var expandImg = document.getElementById("expandedImg");
+              var imgText = document.getElementById("imgtext");
+              expandImg.src = imgs.src;
+              imgText.innerHTML = imgs.alt;
+              expandImg.parentElement.style.display = "block";
+            }
+            </script>
 
       </div>
     
