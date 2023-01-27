@@ -1,2 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+download/booklets/CL_Mind-The-Gap_2018.pdf filter=lfs diff=lfs merge=lfs -text
+download/booklets/*.pdf filter=lfs diff=lfs merge=lfs -text
