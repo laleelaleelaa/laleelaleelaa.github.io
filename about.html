@@ -11,7 +11,6 @@
 <link rel="stylesheet" href="CSS1/cornertag.css">
 <link rel="stylesheet" href="CSS1/content-font.css">
 <link rel="stylesheet" href="codings/fade-in-page.css">
-<link rel="stylesheet" href="CSS1/pjt-dropdown.css">
 <link rel="stylesheet" href="CSS1/img-tab-gallery.css">
 
 
@@ -33,32 +32,69 @@
 
   
   <style type="text/css">
-  
+
+#content h1{
+padding-bottom: 20px;
+}
+
+h1 #h1-small {
+  font-size: 30px;
+  padding: 10px 0px 30px 0px;
+  margin:0;
+  text-transform: none;
+}
+
 .button2 {
   display:inline-block;
   font-family: "Helvetica", serif;
-  font-size: 12px;
-  margin: 10px;
-  background-color: rgba(255,255,255,0.3);
-  color: #fff;
-  font-weight:bold;
+  font-size: 10px;
+  margin: 10px 0px;
+  bottom:0;
+  background-color: rgba(255,255,255,1);
+  color: rgba(0,0,0,1);
+  font-weight:600;
+  letter-spacing:1px;
   width: 100px;
-  padding: 10px;
+  padding: 5px;
   font-style:normal;
   text-transform:uppercase;
-  border: 1px solid rgba(255,255,255,0.7);
+  border: 1px solid rgba(255,255,255,1);
   text-align: center;
   }
   
-.button2:hover {
-  background-color:#fff;
-  color:#000;
-  border: 0.5px solid ffff;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+  .button2:hover {
+  background-color:rgba(255,255,255,0);
+  border: 1px solid rgba(255,255,255,1);
+  color:#fff;
+}
+
+.button3 {
+  display:inline-block;
+  font-family: "Helvetica", serif;
+  font-size: 12px;
+  margin: 30px 30px 0px 0px;
+  bottom:0;
+  background-color: transparent;
+  color: rgba(255,255,255,0.4);
+  font-weight:200;
+  letter-spacing:1px;
+  padding: 8px 0px 5px 0px;
+  font-style:normal;
+  text-transform:lowercase;
+  border-bottom: 2px solid transparent;
+  text-align: center;
+  }
+  
+  .button3:hover {
+  background-color:rgba(255,255,255,0);
+  border-bottom: 2px solid rgba(255,255,255,1);
+  color:#fff;
+}
+
+  #button-active {
+  background-color:rgba(255,255,255,0);
+  border-bottom: 2px solid rgba(255,255,255,1);
+  color:#fff;
 }
 
 .bigger-text {
@@ -71,12 +107,75 @@
   margin: 0px 0px 30px 0px; 
   }
 
-table {
+  table {
   table-layout:fixed;
   width: 100%;
   min-width: 700px;
   margin: 100px 0px 0px 0px; 
   }
+
+tr {
+  width: 100%;
+  min-width: 700px;
+  background-color: none;
+}
+
+.item-break {
+  width: 100%;
+  height: 150px;
+  background-color:transparent;
+}
+  
+td {
+  vertical-align:top;
+}
+
+.img-col {
+  height: auto;
+  background-color: none;
+  }
+
+.des-col {
+  width: 300px;
+  height: auto;
+  background-color: none;
+  padding: 0px 0px 0px 40px;
+  font-family: helvetica;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+  }
+
+h2 {
+  font-family:  helvetica, serif;
+  font-size: 22px;
+  letter-spacing: 0px;
+  line-height: 27px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.5);
+  margin: 75px 0px 30px 0px; 
+  }
+ 
+.product-img1 {
+  width: 100%;
+  margin: 0px 0px 150px 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  }
+  
+hr {
+  border: solid 2px white;
+  margin: 20px 0px 40px 0px;}
+
+.des-col a:link, .des-col a:visited, .des-col a:active {
+  color: rgba(255,255,255,0.4);
+  text-decoration: underline;
+  font-weight:500;
+}
+
+.des-col a:hover {
+  color: rgba(255,255,255,1);
+}
 
 </style>
 
@@ -90,13 +189,6 @@ table {
             fadeInPage();
   </script>
 
-        <div class="container">
-          <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-          <img id="expandedImg">
-          <div id="imgtext"></div>
-        </div>
-
-          
 
   <div id="background">
   </div>
@@ -132,99 +224,64 @@ table {
         		<a href="contact.html">contact</a>
         	</div>
         
-          <script>
+
+              <script>
               
-            var dropdown = document.getElementsByClassName("dropdown-btn");
-            var i;
-            
-            for (i = 0; i < dropdown.length; i++) {
-              dropdown[i].addEventListener("click", function() {
-              this.classList.toggle("active");
-              var dropdownContent = this.nextElementSibling;
-              if (dropdownContent.style.display === "block") {
-              dropdownContent.style.display = "none";
-              } else {
-              dropdownContent.style.display = "block";
+              var dropdown = document.getElementsByClassName("dropdown-btn");
+              var i;
+              
+              for (i = 0; i < dropdown.length; i++) {
+                dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+                } else {
+                dropdownContent.style.display = "block";
+                }
+                });
               }
-              });
-            }
-            </script>
-              
+              </script>
 
         </div>
 
       </div>
     </div>
     
-
-
+    
     <div id="content">
     
     
-      <h1>ARCHITECTURE</h1>
-      
+      <h1>
+        side projects<br>
+        <p id="h1-small">by.CL</p>
+          <a href="side-projects.html"><div class="button3">display</div></a>
+          <a href="about.html"><div class="button3" id="button-active">about</div></a>
+          <a href="https://www.instagram.com/by.cl__________/" target="blank"><div class="button3">instagram</div></a>
+      </h1>
+
       <div class="bigger-text">
-
-
-        <button class="dropdown-pjt"><div class="pjtdropdown">P.VILION_GENT<div class="pjt-year">2023</div></div></button>
-          <div class="dropdown-pjt-container">
-            <br>
-            <div class="pjt-info">
-              
-              public sanitary pavilion in the Citadelpark<br>
-              Location: Gent, Belgium<br>
-              year: 2023<br>
-              <br>
-              <br>
-              <a href="https://www.ensemble.gent/" target="new">www.ensemble.gent</a>
-            </div>
-            <div class="pjt-des">
-              A proposal for an architectural pavilion for the Citadelpark of Ghent which includes 
-            a new (and first) genderneutral, wheelchair accessible public toilet offering
-            a covered public space for resting, playing and meeting. 
-            Fully reusable in materiality, without leaving a trace on the protected surroundings.<br>
-            <br>
-            In collaboration with Marine Boey, Fred Meeuwens, Wolf Vandekerckhove and Natan Van Laethem.
-            </div>
+        <table>
+          <div class="text0">
+         <i>"There is still so much I want to do in life. Crafts to learn, objects to make, arts to master, curiosities to explore. <br><br>
+          I want to experiment, I want to trial and error, I want to express without considering the opinions of others. This is for me. 
+          Side projects, intimately free, slowly paced and highly personal."</i><br><br> — Lina<br>
           </div>
+          <br>
+          <div class="text1">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+            sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+  
 
 
-        <script>
 
-          var dropdown = document.getElementsByClassName("dropdown-pjt");
-          var i;
+
+
           
-          for (i = 0; i < dropdown.length; i++) {
-            dropdown[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var dropdownContent = this.nextElementSibling;
-            if (dropdownContent.style.display === "block") {
-            dropdownContent.style.display = "none";
-            } else {
-            dropdownContent.style.display = "block";
-            }
-            });
-          }
-          </script>
-
-        <script>
-          function myFunction(imgs) {
-            var expandImg = document.getElementById("expandedImg");
-            var imgText = document.getElementById("imgtext");
-            expandImg.src = imgs.src;
-            imgText.innerHTML = imgs.alt;
-            expandImg.parentElement.style.display = "block";
-          }
-        </script>
-
-
-      </div>
-    
-
-    
-
-        <br><br><br>
-            <div class="copyright">
+          <div class="copyright">
             All materials displayed on this website — including but not limited to visual artworks, illustrations, drawings, texts, writings, videos, 
             designs, objects, garments, and other creative works — are original creations and are protected by copyright and intellectual property laws, unless otherwise stated.<BR>
             <BR>
@@ -233,24 +290,26 @@ table {
             Any unauthorized use, copying, reproduction, reprinting, publication, distribution, adaptation, or exploitation of any content on this website, 
             in whole or in part, without the express prior written consent of the copyright holder, is strictly prohibited and may result in legal action.
             </div>
-    
-    </div>
-  </div>
-
-
-
-      
-  <div id="tagwrap">
-    <a href="index.html">
-      <div id="tag_1">
-       CL
+        </table>
       </div>
-    </a>
-  
-    <div id="tag_2">
-      copyright &#169; chenlina 2026<br>all rights reserved<br>
     </div>
   </div>
+
+
+<div id="tagwrap">
+  <a href="index.html">
+    <div id="tag_1">
+     CL
+    </div>
+  </a>
+
+  <div id="tag_2">
+    copyright &#169; chenlina 2026<br>all rights reserved<br>
+  </div>
+</div>
+
+
+
 
 </body>
 </html>

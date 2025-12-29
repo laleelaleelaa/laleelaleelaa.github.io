@@ -25,6 +25,7 @@ body {
   
 #content {
   width: calc(60% - 380px);
+  min-width: 500px;
   background-color: rgba(255,0,0,0);
   padding: 310px 300px 200px 80px;
   margin: 0px 0px 0px 40%;
@@ -55,3 +56,35 @@ body {
     font-weight: 300;
     color: rgba(255,255,255,0.8);
     }
+  
+.text0 {
+  color: rgba(255,255,255,0.8);
+  padding: 0px 0px 40px 0px;
+  }
+
+.text1 {
+  font-family:  helvetica, serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 24px;
+  color: rgba(255,255,255,0.8);
+  }
+
+.text2 {
+  font-family:  helvetica, serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 24px;
+  color: rgba(255,255,255,0.2);
+  }
+
+  .copyright {
+  font-family:  helvetica, serif;
+  font-size: 10px;
+  letter-spacing: 1px;
+  line-height: 18px;
+  color: rgba(255,255,255,0.2);
+  padding: 50px 0px 0px 0px;
+  margin: 50px 0px 0px 0px;
+  border-top: 1px solid rgba(255,255,255,0.1)
+  }
