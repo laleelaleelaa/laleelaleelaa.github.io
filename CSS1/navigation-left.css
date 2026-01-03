@@ -119,13 +119,6 @@
 	margin-right: 20px;
 }
 
-
-/* Some media queries for responsiveness */
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
 .listed {
 	font-family: helvetica;
 	font-weight: 100;}
