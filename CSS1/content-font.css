@@ -78,6 +78,24 @@ body {
   color: rgba(255,255,255,0.2);
   }
 
+  .text3 {
+  color: rgba(255,255,255,0.6);
+  font-family:  helvetica, serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 24px;
+  }
+
+.text3 a:link, .text3 a:visited, .text3 a:active {
+  color: rgba(255,255,255,0.6);
+  text-decoration: underline;
+  font-weight:500;
+}
+
+.text3 a:hover {
+color: rgba(255,255,255,1);
+}
+
   .copyright {
   font-family:  helvetica, serif;
   font-size: 10px;
